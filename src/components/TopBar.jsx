@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function AppBar() {
+export default function TopBar() {
   const classes = useStyles();
   return (
     <Typography className={classes.root} align='center'>
