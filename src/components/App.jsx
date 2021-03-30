@@ -1,9 +1,8 @@
 import { Container, CssBaseline, makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
+import About from './About';
 import AppContent from './AppContent';
 import NavBar from './NavBar';
-
-import About from './About';
 
 const useStyles = makeStyles({
   root: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ButtonGroup, Button } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 import About from './About';
 import Hobbies from './Hobbies';
@@ -39,7 +39,7 @@ const ButtonsConfig = [
 
 export default function NavBarButtons({ onClick }) {
   return (
-    <ButtonGroup style={{ paddingTop: '50px' }} variant='text'>
+    <div style={{ paddingTop: '50px' }}>
       {ButtonsConfig.map((button, index) => {
         return (
           <Button onClick={() => onClick(button.makeContent)} key={index}>
@@ -47,7 +47,7 @@ export default function NavBarButtons({ onClick }) {
           </Button>
         );
       })}
-    </ButtonGroup>
+    </div>
   );
 }
 
