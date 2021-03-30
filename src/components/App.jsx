@@ -5,7 +5,6 @@ import NavBar from './NavBar';
 
 const useStyles = makeStyles({
   root: {
-    height: '100vh',
     borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
