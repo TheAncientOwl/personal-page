@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Content({ children }) {
+export default function AppContent({ children }) {
   const classes = useStyles();
   return (
     <>
@@ -24,6 +24,6 @@ export default function Content({ children }) {
   );
 }
 
-Content.propTypes = {
+AppContent.propTypes = {
   children: PropTypes.any,
 };

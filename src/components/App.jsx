@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles, CssBaseline, Container } from '@material-ui/core';
 
 import AppBar from './AppBar';
-import Content from './Content';
+import AppContent from './AppContent';
 
 const useStyles = makeStyles({
   root: {
@@ -21,7 +21,7 @@ export default function App() {
       <CssBaseline />
       <Container className={classes.root} fixed maxWidth='md'>
         <AppBar onContentChange={setContent} />
-        <Content>{content}</Content>
+        <AppContent>{content}</AppContent>
       </Container>
     </>
   );
