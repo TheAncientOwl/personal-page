@@ -1,6 +1,18 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  root: {
+    borderStyle: 'solid',
+    borderWidth: '0.5px',
+  },
+});
 
 export default function DownBar() {
-  return <Typography align='center'>Down Bar</Typography>;
+  const classes = useStyles();
+  return (
+    <Typography className={classes.root} align='center'>
+      Down Bar
+    </Typography>
+  );
 }
