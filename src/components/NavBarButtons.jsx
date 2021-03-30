@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { makeStyles, ButtonGroup, Button } from '@material-ui/core';
+import { ButtonGroup, Button } from '@material-ui/core';
 
 import About from './About';
 import Hobbies from './Hobbies';
@@ -37,18 +37,9 @@ const ButtonsConfig = [
   },
 ];
 
-const useStyles = makeStyles({
-  root: {
-    paddingTop: '20px',
-    paddingBottom: '20px',
-  },
-});
-
 export default function NavBarButtons({ onClick }) {
-  const classes = useStyles();
-
   return (
-    <ButtonGroup className={classes.root} variant='text'>
+    <ButtonGroup style={{ paddingTop: '50px' }} variant='text'>
       {ButtonsConfig.map((button, index) => {
         return (
           <Button onClick={() => onClick(button.makeContent)} key={index}>

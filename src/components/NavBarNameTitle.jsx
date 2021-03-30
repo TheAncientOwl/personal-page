@@ -1,18 +1,7 @@
 import React from 'react';
 
-import { makeStyles, Typography } from '@material-ui/core';
-
-const useStyles = makeStyles({
-  root: {
-    paddingTop: '15px',
-  },
-});
+import { Typography } from '@material-ui/core';
 
 export default function NavBarNameTitle() {
-  const classes = useStyles();
-  return (
-    <Typography className={classes.root} variant='h4'>
-      Delegeanu Alexandru
-    </Typography>
-  );
+  return <Typography variant='h3'>Delegeanu Alexandru</Typography>;
 }

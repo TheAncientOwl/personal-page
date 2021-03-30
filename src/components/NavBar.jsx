@@ -6,11 +6,11 @@ import NavBarNameTitle from './NavBarNameTitle';
 
 const useStyles = makeStyles({
   root: {
-    borderStyle: 'solid',
+    //borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
     textAlign: 'center',
-    marginTop: '10px',
+    marginTop: '40px',
   },
 });
 
