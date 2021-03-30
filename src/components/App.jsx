@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { makeStyles, CssBaseline, Container } from '@material-ui/core';
+import React from 'react';
 
-import TopBar from './TopBar';
-import Content from './Content';
+import { makeStyles, Container, CssBaseline } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -13,15 +11,13 @@ const useStyles = makeStyles({
 });
 
 export default function App() {
-  const [content, setContent] = useState('Default content');
   const classes = useStyles();
 
   return (
     <>
       <CssBaseline />
       <Container className={classes.root} fixed maxWidth='md'>
-        <TopBar onContentChange={setContent} />
-        <Content>{content}</Content>
+        Hello there
       </Container>
     </>
   );
