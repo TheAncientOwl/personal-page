@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import AppContent from './AppContent';
 import NavBar from './NavBar';
 
+import About from './About';
+
 const useStyles = makeStyles({
   root: {
     //borderStyle: 'solid',
@@ -12,7 +14,7 @@ const useStyles = makeStyles({
 });
 
 export default function App() {
-  const [content, setContent] = useState('idk');
+  const [content, setContent] = useState(About());
   const classes = useStyles();
 
   return (
