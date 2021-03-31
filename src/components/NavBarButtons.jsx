@@ -37,25 +37,6 @@ const ButtonsConfig = [
   },
 ];
 
-function BackToTopButton({ onClick, title }) {
-  const handleClick = event => {
-    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
-
-    if (anchor) {
-      anchor.scrollIntoView({ behaviour: 'smooth', block: 'center' });
-    }
-
-    onClick();
-  };
-
-  return <Button onClick={handleClick}>{title}</Button>;
-}
-
-BackToTopButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  title: PropTypes.any.isRequired,
-};
-
 export default function NavBarButtons({ onClick }) {
   return (
     <div style={{ paddingTop: '50px' }}>
