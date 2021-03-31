@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
+    minHeight: '100vh',
   },
 });
 
