@@ -1,7 +1,6 @@
 import { IconButton, makeStyles, Tooltip, Zoom, Typography } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
 import React from 'react';
 
@@ -22,12 +21,6 @@ const ButtonsConfig = [
     tooltip: 'GitHub',
     icon: <GitHubIcon />,
     link: 'https://github.com/TheAncientOwl',
-    onClick: undefined,
-  },
-  {
-    tooltip: 'LinkedIn',
-    icon: <LinkedInIcon />,
-    link: 'https://ro.linkedin.com/',
     onClick: undefined,
   },
   {
