@@ -1,7 +1,9 @@
-import React from 'react';
-
-import { makeStyles, IconButton } from '@material-ui/core';
+import { IconButton, makeStyles, Tooltip } from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MailIcon from '@material-ui/icons/Mail';
+import React from 'react';
 
 const useStyles = makeStyles({
   root: {
@@ -15,13 +17,45 @@ const useStyles = makeStyles({
   },
 });
 
+const ButtonsConfig = [
+  {
+    tooltip: 'GitHub',
+    icon: <GitHubIcon />,
+    link: 'https://github.com/TheAncientOwl',
+    onClick: undefined,
+  },
+  {
+    tooltip: 'LinkedIn',
+    icon: <LinkedInIcon />,
+    link: 'https://ro.linkedin.com/',
+    onClick: undefined,
+  },
+  {
+    tooltip: 'Facebook',
+    icon: <FacebookIcon />,
+    link: 'https://www.facebook.com/delegeanu.alexandru/',
+    onClick: undefined,
+  },
+  {
+    tooltip: 'dele.alex.o.o@gmail.com',
+    icon: <MailIcon />,
+    onClick: undefined,
+  },
+];
+
 export default function BottomBar() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <IconButton>
-        <GitHubIcon />
-      </IconButton>
+      {ButtonsConfig.map((button, index) => {
+        return (
+          <Tooltip key={index} arrow title={button.tooltip}>
+            <IconButton style={{ color: 'black' }} href={button.link} onClick={button.onClick} target='_blank'>
+              {button.icon}
+            </IconButton>
+          </Tooltip>
+        );
+      })}
     </div>
   );
 }
