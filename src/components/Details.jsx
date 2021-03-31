@@ -64,7 +64,7 @@ const DetailsConfig = [
 export default function Details() {
   return (
     <Box display='flex' alignItems='center' justifyContent='center'>
-      <Typography>
+      <Typography component='div'>
         <List>
           {DetailsConfig.map((detail, index) => (
             <ListIconTextItem key={index} icon={detail.icon} text1={detail.title} text2={detail.value} />
