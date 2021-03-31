@@ -15,7 +15,7 @@ export default function NavBarNameTitle() {
   };
 
   return (
-    <Typography style={{ paddingTop: '45px' }} component='div' variant={scrollY === 0 ? 'h3' : 'h4'}>
+    <Typography style={{ paddingTop: '45px' }} component='div' variant={scrollY === 0 ? 'h4' : 'h5'}>
       Delegeanu Alexandru
     </Typography>
   );
