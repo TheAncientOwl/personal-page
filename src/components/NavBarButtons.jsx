@@ -46,9 +46,8 @@ export default function NavBarButtons({ onClick }) {
             onClick={() => {
               const anchor = document.querySelector('#back-to-top-anchor');
               if (anchor) {
-                console.log('ceaw');
                 anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              } else console.log('meh');
+              }
               onClick(button.makeContent);
             }}
             key={index}>
