@@ -4,7 +4,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    //borderStyle: 'solid',
+    borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
     marginTop: '180px',
