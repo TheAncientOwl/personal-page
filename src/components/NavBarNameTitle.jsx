@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Typography } from '@material-ui/core';
 
 export default function NavBarNameTitle() {
-  return <Typography variant='h3'>Delegeanu Alexandru</Typography>;
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, true);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  return <Typography variant={scrollY === 0 ? 'h3' : 'h4'}>Delegeanu Alexandru</Typography>;
 }
