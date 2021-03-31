@@ -16,10 +16,6 @@ const ButtonsConfig = [
     makeContent: About,
   },
   {
-    title: 'Hobbies',
-    makeContent: Hobbies,
-  },
-  {
     title: 'Skills',
     makeContent: Skills,
   },
@@ -30,6 +26,10 @@ const ButtonsConfig = [
   {
     title: 'Projects',
     makeContent: Projects,
+  },
+  {
+    title: 'Hobbies',
+    makeContent: Hobbies,
   },
   {
     title: 'Details',
