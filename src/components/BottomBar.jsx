@@ -1,4 +1,4 @@
-import { IconButton, makeStyles, Tooltip } from '@material-ui/core';
+import { IconButton, makeStyles, Tooltip, Zoom } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -49,7 +49,7 @@ export default function BottomBar() {
     <div className={classes.root}>
       {ButtonsConfig.map((button, index) => {
         return (
-          <Tooltip key={index} arrow title={button.tooltip}>
+          <Tooltip key={index} arrow title={button.tooltip} TransitionComponent={Zoom}>
             <IconButton style={{ color: 'black' }} href={button.link} onClick={button.onClick} target='_blank'>
               {button.icon}
             </IconButton>
