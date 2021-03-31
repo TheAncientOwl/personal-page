@@ -7,7 +7,7 @@ import NavBarNameTitle from './NavBarNameTitle';
 export default function NavBar({ onClick }) {
   return (
     <AppBar style={{ alignItems: 'center' }} elevation={0} color='inherit' position='fixed'>
-      <Toolbar style={{ display: 'flex', flexDirection: 'column' }}>
+      <Toolbar style={{ flexDirection: 'column' }}>
         <NavBarNameTitle />
         <NavBarButtons onClick={onClick} />
       </Toolbar>
