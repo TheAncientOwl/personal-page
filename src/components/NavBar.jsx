@@ -6,11 +6,13 @@ import NavBarNameTitle from './NavBarNameTitle';
 
 const useStyles = makeStyles({
   root: {
-    //borderStyle: 'solid',
+    borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
+    position: 'fixed',
+    width: '100%',
+    background: 'white',
     textAlign: 'center',
-    marginTop: '40px',
   },
 });
 
@@ -18,10 +20,10 @@ export default function NavBar({ onClick }) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <header className={classes.root}>
       <NavBarNameTitle />
       <NavBarButtons onClick={onClick} />
-    </div>
+    </header>
   );
 }
 

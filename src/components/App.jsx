@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 
 const useStyles = makeStyles({
   root: {
-    //borderStyle: 'solid',
+    borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
   },
@@ -19,8 +19,10 @@ export default function App() {
   return (
     <>
       <CssBaseline />
+
+      <NavBar onClick={setContent} />
+
       <Container className={classes.root} fixed maxWidth='md'>
-        <NavBar onClick={setContent} />
         <AppContent>{content}</AppContent>
       </Container>
     </>
