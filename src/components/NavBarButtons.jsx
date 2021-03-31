@@ -37,12 +37,40 @@ const ButtonsConfig = [
   },
 ];
 
+function BackToTopButton({ onClick, title }) {
+  const handleClick = event => {
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+
+    if (anchor) {
+      anchor.scrollIntoView({ behaviour: 'smooth', block: 'center' });
+    }
+
+    onClick();
+  };
+
+  return <Button onClick={handleClick}>{title}</Button>;
+}
+
+BackToTopButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  title: PropTypes.any.isRequired,
+};
+
 export default function NavBarButtons({ onClick }) {
   return (
     <div style={{ paddingTop: '50px' }}>
       {ButtonsConfig.map((button, index) => {
         return (
-          <Button onClick={() => onClick(button.makeContent)} key={index}>
+          <Button
+            onClick={() => {
+              const anchor = document.querySelector('#back-to-top-anchor');
+              if (anchor) {
+                console.log('ceaw');
+                anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              } else console.log('meh');
+              onClick(button.makeContent);
+            }}
+            key={index}>
             {button.title}
           </Button>
         );

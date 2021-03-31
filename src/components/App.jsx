@@ -21,7 +21,7 @@ export default function App() {
       <CssBaseline />
 
       <NavBar onClick={setContent} />
-
+      <div id='back-to-top-anchor' />
       <Container className={classes.root} fixed maxWidth='md'>
         <AppContent>{content}</AppContent>
       </Container>
