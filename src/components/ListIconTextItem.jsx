@@ -8,7 +8,7 @@ export default function ListIconTextItem({ icon, text1, text2 }) {
       <ListItem>
         <ListItemIcon style={{ color: 'gray' }}>{icon}</ListItemIcon>
         <ListItemText>
-          <span style={{ fontStyle: 'italic' }}>{text1}</span>: <span style={{ color: 'green' }}> {text2}</span>
+          <span style={{ fontStyle: 'italic' }}>{text1}</span> &gt; <span style={{ color: 'green' }}> {text2}</span>
         </ListItemText>
       </ListItem>
       <Divider />
