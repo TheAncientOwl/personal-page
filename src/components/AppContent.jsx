@@ -2,17 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
     borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
+
     marginTop: '180px',
     textAlign: 'center',
-    flexGrow: 1,
-    padding: theme.spacing(3),
   },
-}));
+});
 
 export default function AppContent({ children }) {
   const classes = useStyles();

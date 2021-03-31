@@ -9,9 +9,10 @@ const useStyles = makeStyles({
     borderStyle: 'solid',
     borderWidth: '0.5px',
     borderColor: 'green',
+
     position: 'fixed',
     width: '100%',
-    background: 'white',
+    background: 'inherit',
     textAlign: 'center',
   },
 });
