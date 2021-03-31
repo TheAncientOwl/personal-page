@@ -20,7 +20,7 @@ MyLink.propTypes = {
 export default function About() {
   return (
     <>
-      <Grid container justify='space-between'>
+      <Grid container>
         <Grid item xs={12} sm={2}>
           <Avatar alt='Delegeanu Alexandru' component='span' style={{ height: '160px', width: '160px' }} src={Img} />
         </Grid>
