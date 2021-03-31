@@ -54,7 +54,7 @@ export default function BottomBar() {
       {ButtonsConfig.map((button, index) => {
         return (
           <Tooltip key={index} arrow title={button.tooltip} TransitionComponent={Zoom}>
-            <IconButton style={{ color: 'black' }} href={button.link} onClick={button.onClick} target='_blank'>
+            <IconButton style={{ color: 'gray' }} href={button.link} onClick={button.onClick} target='_blank'>
               {button.icon}
             </IconButton>
           </Tooltip>
