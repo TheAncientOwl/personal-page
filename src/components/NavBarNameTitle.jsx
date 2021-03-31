@@ -14,5 +14,9 @@ export default function NavBarNameTitle() {
     setScrollY(window.scrollY);
   };
 
-  return <Typography variant={scrollY === 0 ? 'h3' : 'h4'}>Delegeanu Alexandru</Typography>;
+  return (
+    <Typography component='div' variant={scrollY === 0 ? 'h3' : 'h4'}>
+      Delegeanu Alexandru
+    </Typography>
+  );
 }
