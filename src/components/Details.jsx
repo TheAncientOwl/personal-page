@@ -67,7 +67,7 @@ export default function Details() {
       <Typography component='div'>
         <List>
           {DetailsConfig.map((detail, index) => (
-            <ListIconTextItem key={index} icon={detail.icon} text1={detail.title} text2={detail.value} />
+            <ListIconTextItem key={index} icon={detail.icon} prop1={detail.title} prop2={detail.value} />
           ))}
         </List>
       </Typography>

@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ListItemText, ListItem, ListItemIcon, Divider } from '@material-ui/core';
 
-export default function ListIconTextItem({ icon, text1, text2 }) {
+export default function ListIconTextItem({ icon, prop1, prop2 }) {
   return (
     <>
       <ListItem>
         <ListItemIcon style={{ color: 'gray' }}>{icon}</ListItemIcon>
         <ListItemText>
-          <span style={{ fontStyle: 'italic' }}>{text1}</span> &gt; <span style={{ color: 'green' }}> {text2}</span>
+          <span style={{ fontStyle: 'italic' }}>{prop1}</span> &gt; <span style={{ color: 'green' }}>{prop2}</span>
         </ListItemText>
       </ListItem>
       <Divider />
@@ -18,6 +18,6 @@ export default function ListIconTextItem({ icon, text1, text2 }) {
 
 ListIconTextItem.propTypes = {
   icon: PropTypes.any.isRequired,
-  text1: PropTypes.string.isRequired,
-  text2: PropTypes.string,
+  prop1: PropTypes.any.isRequired,
+  prop2: PropTypes.any,
 };
