@@ -44,7 +44,11 @@ const ButtonsConfig = [
 ];
 
 function Copyright() {
-  return <Typography style={{ position: 'realtive', float: 'right', fontSize: '15px' }}>Copyright 2020</Typography>;
+  return (
+    <Typography style={{ color: 'gray', position: 'realtive', float: 'right', fontSize: '15px' }}>
+      Copyright 2020
+    </Typography>
+  );
 }
 
 export default function BottomBar() {
