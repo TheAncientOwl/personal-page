@@ -27,7 +27,7 @@ const SkillsConfig = [
     ],
   },
   {
-    language: 'C#',
+    language: 'C# & UnityEngine',
     level: 'beginner',
     about: [
       'In my first year of college I became more and more interested in how games are created.',
@@ -37,7 +37,7 @@ const SkillsConfig = [
     ],
   },
   {
-    language: 'JavaScript',
+    language: 'JavaScript & ReactJS',
     level: 'beginner',
     about: [
       'As a fun fact, the first time I used JavasSript was in 10th grade in high school for a grid test for any web page. Then I hoped it would be the first and last time I use it.',
@@ -56,7 +56,7 @@ export default function Skills() {
             <ListIconTextItem icon={<BeenhereIcon />} text1={skill.language} text2={skill.level} />
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <Typography component='div'>
               <ul style={{ listStyleType: 'none' }}>
                 {skill.about.map((ab, index) => (
                   <li key={index}>{ab}</li>
