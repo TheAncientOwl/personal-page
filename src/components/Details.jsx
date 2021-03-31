@@ -9,6 +9,7 @@ import ListIconTextItem from './ListIconTextItem';
 import AssistantIcon from '@material-ui/icons/Assistant';
 import BeenhereIcon from '@material-ui/icons/Beenhere';
 import AlbumIcon from '@material-ui/icons/Album';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const DetailsConfig = [
   {
@@ -30,6 +31,11 @@ const DetailsConfig = [
     title: 'Email',
     value: 'dele.alex.o.o@gmail.com',
     icon: <EmailIcon />,
+  },
+  {
+    title: 'GitHub',
+    value: 'https://github.com/TheAncientOwl',
+    icon: <GitHubIcon />,
   },
   {
     title: 'Favourite bird',
