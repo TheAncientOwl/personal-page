@@ -14,7 +14,11 @@ const useStyles = makeStyles({
 
 export default function AppContent({ children }) {
   const classes = useStyles();
-  return <Typography className={classes.root}>{children}</Typography>;
+  return (
+    <Typography component='span' className={classes.root}>
+      {children}
+    </Typography>
+  );
 }
 
 AppContent.propTypes = {
