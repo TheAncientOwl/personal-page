@@ -39,7 +39,7 @@ const ButtonsConfig = [
 
 export default function NavBarButtons({ onClick }) {
   return (
-    <div style={{ paddingTop: '50px' }}>
+    <div style={{ paddingTop: '55px' }}>
       {ButtonsConfig.map((button, index) => {
         return (
           <Button
