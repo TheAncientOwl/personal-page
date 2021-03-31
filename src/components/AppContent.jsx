@@ -6,7 +6,8 @@ const useStyles = makeStyles({
   root: {
     borderStyle: 'solid',
     borderWidth: '0.5px',
-    borderColor: 'green',
+    //borderColor: 'green',
+    borderColor: 'transparent',
 
     marginTop: '180px',
     textAlign: 'center',

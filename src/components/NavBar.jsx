@@ -8,7 +8,8 @@ const useStyles = makeStyles({
   root: {
     borderStyle: 'solid',
     borderWidth: '0.5px',
-    borderColor: 'green',
+    //borderColor: 'green',
+    borderColor: 'transparent',
 
     position: 'fixed',
     width: '100%',
