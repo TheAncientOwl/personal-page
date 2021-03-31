@@ -1,4 +1,4 @@
-import { IconButton, makeStyles, Tooltip, Zoom } from '@material-ui/core';
+import { IconButton, makeStyles, Tooltip, Zoom, Typography } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -43,6 +43,10 @@ const ButtonsConfig = [
   },
 ];
 
+function Copyright() {
+  return <Typography style={{ position: 'realtive', float: 'right', fontSize: '15px' }}>Copyright 2020</Typography>;
+}
+
 export default function BottomBar() {
   const classes = useStyles();
   return (
@@ -56,6 +60,7 @@ export default function BottomBar() {
           </Tooltip>
         );
       })}
+      <Copyright />
     </div>
   );
 }
