@@ -51,7 +51,7 @@ const ExperienceConfig = [
 
 export default function Experience() {
   return (
-    <Timeline align='right'>
+    <Timeline style={{ paddingLeft: '9%' }} align='right'>
       {ExperienceConfig.map((exp, index) => (
         <TimelineItem key={index}>
           <TimelineContent>
