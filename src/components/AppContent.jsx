@@ -17,18 +17,19 @@ const useStyles = makeStyles({
   },
 });
 
-export default function AppContent({ children }) {
+export default function AppContent({ children, onThemeSwitch }) {
   const classes = useStyles();
   return (
     <>
       <Typography component='div' className={classes.root}>
         {children}
       </Typography>
-      <BottomBar />
+      <BottomBar onThemeSwitch={onThemeSwitch} />
     </>
   );
 }
 
 AppContent.propTypes = {
   children: PropTypes.any.isRequired,
+  onThemeSwitch: PropTypes.func.isRequired,
 };

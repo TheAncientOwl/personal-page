@@ -3,6 +3,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
 import React from 'react';
+import PropTypes from 'prop-types';
+import ThemeToggleButton from './ThemeToggleButton';
 
 const useStyles = makeStyles({
   root: {
@@ -44,10 +46,11 @@ function Copyright() {
   );
 }
 
-export default function BottomBar() {
+export default function BottomBar({ onThemeSwitch }) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <Copyright />
       {ButtonsConfig.map((button, index) => {
         return (
           <Tooltip key={index} arrow title={button.tooltip} TransitionComponent={Zoom}>
@@ -57,7 +60,12 @@ export default function BottomBar() {
           </Tooltip>
         );
       })}
-      <Copyright />
+
+      <ThemeToggleButton onClick={onThemeSwitch} />
     </div>
   );
 }
+
+BottomBar.propTypes = {
+  onThemeSwitch: PropTypes.func.isRequired,
+};

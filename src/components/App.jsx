@@ -1,42 +1,66 @@
-import { Container, createMuiTheme, CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
-import { green, grey } from '@material-ui/core/colors';
+import { Container, createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
 import React, { useState } from 'react';
 import About from './About';
 import AppContent from './AppContent';
 import NavBar from './NavBar';
 
-const useStyles = makeStyles({
-  root: {
-    borderStyle: 'solid',
-    borderWidth: '0.5px',
-    //borderColor: 'green',
-    borderColor: 'transparent',
-    minHeight: '100vh',
-  },
-});
-
-const theme = createMuiTheme({
-  palette: {
-    primary: green,
-    secondary: grey,
-  },
-});
-
 export default function App() {
   const [content, setContent] = useState(<About />);
-  const classes = useStyles();
+  const [lightTheme, setLightTheme] = useState(true);
+
+  const theme = React.useMemo(
+    () =>
+      createMuiTheme({
+        overrides: {
+          MuiContainer: {
+            root: {
+              color: lightTheme ? 'black' : 'white',
+            },
+          },
+          MuiButton: {
+            root: {
+              color: lightTheme ? 'black' : 'white',
+            },
+          },
+          MuiAccordion: {
+            root: {
+              background: lightTheme ? 'white' : 'black',
+              color: lightTheme ? 'black' : 'white',
+            },
+          },
+          MuiToolbar: {
+            root: {
+              background: lightTheme ? 'white' : 'black',
+              color: lightTheme ? 'black' : 'white',
+            },
+          },
+        },
+        palette: {
+          background: {
+            default: lightTheme ? 'white' : 'black',
+          },
+          primary: {
+            main: '#12B000',
+          },
+          secondary: {
+            main: '##63B064',
+          },
+        },
+      }),
+    [lightTheme]
+  );
 
   return (
     <>
-      <CssBaseline />
       <ThemeProvider theme={theme}>
-        <main style={{ background: 'white' }}>
+        <CssBaseline />
+        <main>
           <NavBar onClick={setContent} />
 
           <div id='back-to-top-anchor' />
 
-          <Container className={classes.root} fixed maxWidth='md'>
-            <AppContent>{content}</AppContent>
+          <Container fixed maxWidth='md'>
+            <AppContent onThemeSwitch={() => setLightTheme(!lightTheme)}>{content}</AppContent>
           </Container>
         </main>
       </ThemeProvider>
