@@ -4,6 +4,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import BeenhereIcon from '@material-ui/icons/Beenhere';
 import ListIconTextItem from './ListIconTextItem';
 
+import Highlight from './Highlight';
+
 const HobbiesConfig = [
   {
     title: 'Programming',
@@ -11,15 +13,26 @@ const HobbiesConfig = [
       'I like to see how my ideas come to life.',
       'This passion started in high school',
       'I like to use my logic to solve various algorithmic problems.',
-      'I also like to use programming to automate some tasks.',
-      'I created some tools to defragment my SSD, kill some processes, delete some temporary Windows files, etc.',
+      <>
+        I also like to use programming to <Highlight>automate some tasks</Highlight>.
+      </>,
+      <>
+        I created some tools to <Highlight>defragment my SSD</Highlight>, <Highlight>kill some processes</Highlight>,
+        <Highlight>delete temporary Windows files</Highlight>, etc.
+      </>,
     ],
   },
   {
     title: 'Gaming',
     about: [
-      "I'm a competitive player and I like games like Counter Strike: Global Offensive, Valorant, Rocket League.",
-      'I like these games because, first of all, they are based on teamwork and strategy.',
+      <>
+        I&apos;m a <Highlight>competitive</Highlight> player and I like games like{' '}
+        <Highlight>Counter Strike: Global Offensive</Highlight>, <Highlight>Valorant</Highlight>,
+        <Highlight> Rocket League</Highlight>.
+      </>,
+      <>
+        I like these games because, first of all, they are based on <Highlight>teamwork and strategy</Highlight>.
+      </>,
     ],
   },
 ];
