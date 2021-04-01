@@ -21,12 +21,12 @@ MyLink.propTypes = {
 export default function About() {
   return (
     <>
-      <Grid container>
-        <Grid item xs={12} sm={2}>
+      <Grid container justify='center' spacing={2}>
+        <Grid item>
           <Avatar alt='Delegeanu Alexandru' component='span' style={{ height: '160px', width: '160px' }} src={Img} />
         </Grid>
 
-        <Grid item xs={12} sm={10} style={{ paddingLeft: '50px' }}>
+        <Grid item>
           <Typography component='div' align='left'>
             <p>
               Hello, <i>I&apos;m Alex</i>.
