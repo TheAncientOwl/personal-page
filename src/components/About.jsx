@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Img from '../images/avatar.jpg';
-import ItalicGreen from './ItalicGreen';
+import Highlight from './Highlight';
 
 function MyLink({ href, children }) {
   return (
@@ -41,17 +41,17 @@ export default function About() {
             </p>
 
             <p>
-              I&apos;m a person who likes <ItalicGreen>logical thinking</ItalicGreen> and programming. <br />
+              I&apos;m a person who likes <Highlight>logical thinking</Highlight> and programming. <br />
               Besides, I enjoy traveling, discovering new places, learning new things, and listening to music.
             </p>
 
             <p>
-              It is known that <ItalicGreen>you never know them all</ItalicGreen>, so I&apos;m constantly looking to
+              It is known that <Highlight>you never know them all</Highlight>, so I&apos;m constantly looking to
               discover something new.
             </p>
 
             <p>
-              In the future I want a career in software / web / game <ItalicGreen>development</ItalicGreen>.
+              In the future I want a career in software / web / game <Highlight>development</Highlight>.
             </p>
           </Typography>
         </Grid>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
 
-export default function ItalicGreen({ component, children }) {
+export default function Highlight({ component, children }) {
   return (
     <Typography component={component} style={{ fontStyle: 'italic' }} color='primary'>
       {children}
@@ -10,11 +10,11 @@ export default function ItalicGreen({ component, children }) {
   );
 }
 
-ItalicGreen.defaultProps = {
+Highlight.defaultProps = {
   component: 'span',
 };
 
-ItalicGreen.propTypes = {
+Highlight.propTypes = {
   component: PropTypes.string,
   children: PropTypes.string.isRequired,
 };
