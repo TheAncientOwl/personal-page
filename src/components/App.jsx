@@ -1,4 +1,5 @@
-import { Container, CssBaseline, makeStyles } from '@material-ui/core';
+import { Container, createMuiTheme, CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
+import { green, grey } from '@material-ui/core/colors';
 import React, { useState } from 'react';
 import About from './About';
 import AppContent from './AppContent';
@@ -14,6 +15,13 @@ const useStyles = makeStyles({
   },
 });
 
+const theme = createMuiTheme({
+  palette: {
+    primary: green,
+    secondary: grey,
+  },
+});
+
 export default function App() {
   const [content, setContent] = useState(<About />);
   const classes = useStyles();
@@ -21,15 +29,17 @@ export default function App() {
   return (
     <>
       <CssBaseline />
-      <main style={{ background: 'white' }}>
-        <NavBar onClick={setContent} />
+      <ThemeProvider theme={theme}>
+        <main style={{ background: 'white' }}>
+          <NavBar onClick={setContent} />
 
-        <div id='back-to-top-anchor' />
+          <div id='back-to-top-anchor' />
 
-        <Container className={classes.root} fixed maxWidth='md'>
-          <AppContent>{content}</AppContent>
-        </Container>
-      </main>
+          <Container className={classes.root} fixed maxWidth='md'>
+            <AppContent>{content}</AppContent>
+          </Container>
+        </main>
+      </ThemeProvider>
     </>
   );
 }
