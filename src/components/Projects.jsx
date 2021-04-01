@@ -42,12 +42,13 @@ export default function Projects() {
           primary={
             <>
               <Link
-                style={{ fontStyle: 'italic', color: 'green', fontWeight: 'bold' }}
+                color='primary'
+                style={{ fontStyle: 'italic', fontWeight: 'bold' }}
                 href={repo.html_url}
                 target='_blank'>
                 {repo.name}
               </Link>
-              <Typography style={{ fontStyle: 'italic', color: 'green' }} variant='body2' color='textPrimary'>
+              <Typography color='primary' style={{ fontStyle: 'italic' }} variant='body2'>
                 &lt; {repo.language} &gt;
               </Typography>
             </>
@@ -61,7 +62,7 @@ export default function Projects() {
         />
       </ListItem>
 
-      <Divider style={{ background: 'gray' }} />
+      <Divider color='secondary' />
     </Fragment>
   ));
 
@@ -69,7 +70,7 @@ export default function Projects() {
     <>
       <Typography variant='h5' align='center'>
         &lt; GitHub Repos &gt;
-        <Divider style={{ background: 'green' }} />
+        <Divider color='primary' />
       </Typography>
       <Box display='flex' alignItems='center' justifyContent='center'>
         <List>{listItems}</List>
