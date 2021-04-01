@@ -41,7 +41,7 @@ export default function NavBarButtons({ onClick }) {
   const [currentButton, setCurrentButton] = useState(ButtonsConfig[0].title);
 
   return (
-    <div style={{ paddingTop: '55px', paddingBottom: '10px' }}>
+    <div style={{ paddingBottom: '10px' }}>
       {ButtonsConfig.map((button, index) => {
         const col = currentButton === button.title ? 'green' : 'inherit';
         return (
