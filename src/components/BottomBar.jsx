@@ -38,7 +38,7 @@ const ButtonsConfig = [
 
 function Copyright() {
   return (
-    <Typography style={{ color: 'gray', position: 'realtive', float: 'right', fontSize: '15px' }}>
+    <Typography color='secondary' style={{ position: 'realtive', float: 'right', fontSize: '15px' }}>
       Copyright 2020
     </Typography>
   );
@@ -51,7 +51,7 @@ export default function BottomBar() {
       {ButtonsConfig.map((button, index) => {
         return (
           <Tooltip key={index} arrow title={button.tooltip} TransitionComponent={Zoom}>
-            <IconButton style={{ color: 'gray' }} href={button.link} onClick={button.onClick} target='_blank'>
+            <IconButton color='secondary' href={button.link} onClick={button.onClick} target='_blank'>
               {button.icon}
             </IconButton>
           </Tooltip>
