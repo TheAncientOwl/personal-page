@@ -1,4 +1,7 @@
+import React, { useEffect, useState, Fragment } from 'react';
+
 import {
+  makeStyles,
   Link,
   Avatar,
   List,
@@ -9,17 +12,12 @@ import {
   Box,
   Divider,
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import React, { useEffect, useState } from 'react';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-  },
+const useStyles = makeStyles({
   inline: {
     display: 'inline',
   },
-}));
+});
 
 export default function Projects() {
   const userName = 'TheAncientOwl';
@@ -34,8 +32,8 @@ export default function Projects() {
   }, [userName]);
 
   const listItems = repos.map((repo, index) => (
-    <>
-      <ListItem key={index} alignItems='center'>
+    <Fragment key={index}>
+      <ListItem alignItems='center'>
         <ListItemAvatar>
           <Avatar alt={repo.owner.login} src={repo.owner.avatar_url} />
         </ListItemAvatar>
@@ -62,8 +60,9 @@ export default function Projects() {
           }
         />
       </ListItem>
+
       <Divider style={{ background: 'gray' }} />
-    </>
+    </Fragment>
   ));
 
   return (
@@ -72,7 +71,7 @@ export default function Projects() {
         GitHub Repos
       </Typography>
       <Box display='flex' alignItems='center' justifyContent='center'>
-        <List className={classes.root}>{listItems}</List>
+        <List>{listItems}</List>
       </Box>
     </>
   );
