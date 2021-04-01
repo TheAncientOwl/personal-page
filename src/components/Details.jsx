@@ -14,7 +14,11 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 const DetailsConfig = [
   {
     title: 'Adress',
-    value: 'Câmpulung Mușcel, Argeș',
+    value: (
+      <Link color='primary' target='_blank' href='https://ro.wikipedia.org/wiki/C%C3%A2mpulung'>
+        Câmpulung Mușcel, Argeș
+      </Link>
+    ),
     icon: <HomeIcon />,
   },
   {
@@ -43,12 +47,20 @@ const DetailsConfig = [
   },
   {
     title: 'Favourite bird',
-    value: 'Owl',
+    value: (
+      <Link color='primary' target='_blank' href='https://en.wikipedia.org/wiki/Owl'>
+        Owl
+      </Link>
+    ),
     icon: <AssistantIcon />,
   },
   {
     title: 'Recommended series',
-    value: 'How I met your mother',
+    value: (
+      <Link color='primary' target='_blank' href='https://en.wikipedia.org/wiki/How_I_Met_Your_Mother'>
+        How I met your mother
+      </Link>
+    ),
     icon: <BeenhereIcon />,
   },
   {
