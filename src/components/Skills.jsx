@@ -52,7 +52,7 @@ export default function Skills() {
     <>
       {SkillsConfig.map((skill, index) => (
         <Accordion key={index}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon style={{ color: 'gray' }} />}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon color='secondary' />}>
             <ListIconTextItem icon={<BeenhereIcon />} prop1={skill.language} prop2={skill.level} />
           </AccordionSummary>
           <AccordionDetails>
