@@ -39,7 +39,7 @@ const ButtonsConfig = [
 
 export default function NavBarButtons({ onClick }) {
   const [currentButton, setCurrentButton] = useState(ButtonsConfig[0].title);
-  console.log(currentButton);
+
   return (
     <div style={{ paddingTop: '55px', paddingBottom: '10px' }}>
       {ButtonsConfig.map((button, index) => {
