@@ -38,7 +38,7 @@ const ButtonsConfig = [
 
 function Copyright() {
   return (
-    <Typography color='textSecondary' style={{ position: 'realtive', float: 'right', fontSize: '15px' }}>
+    <Typography color='secondary' style={{ position: 'realtive', float: 'right', fontSize: '15px' }}>
       Copyright 2020
     </Typography>
   );
