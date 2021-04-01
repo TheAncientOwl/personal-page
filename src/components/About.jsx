@@ -6,7 +6,7 @@ import Img from '../images/avatar.jpg';
 
 function MyLink({ href, children }) {
   return (
-    <Link style={{ fontStyle: 'italic', color: 'green' }} href={href} target='_blank'>
+    <Link color='primary' style={{ fontStyle: 'italic' }} href={href} target='_blank'>
       {children}
     </Link>
   );
