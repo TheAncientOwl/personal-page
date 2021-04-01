@@ -55,7 +55,7 @@ const SkillsConfig = [
         I chose the <Highlight>C#</Highlight> version because I wanted <Highlight>something new</Highlight>.
       </>,
       <>
-        I spent a summer learning the features of <Highlight>C# & Unreal Engine</Highlight>. It was fun to come up with
+        I spent a summer learning the features of <Highlight>C# & Unity Engine</Highlight>. It was fun to come up with
         ideas and watch them come to life.
       </>,
     ],
