@@ -43,10 +43,9 @@ export default function NavBarButtons({ onClick }) {
   return (
     <div style={{ paddingBottom: '10px' }}>
       {ButtonsConfig.map((button, index) => {
-        const col = currentButton === button.title ? 'green' : 'inherit';
         return (
           <Button
-            style={{ color: `${col}` }}
+            color={currentButton === button.title ? 'primary' : 'secondary'}
             onClick={() => {
               const anchor = document.querySelector('#back-to-top-anchor');
               if (anchor) {
