@@ -62,7 +62,7 @@ export default function Projects() {
         />
       </ListItem>
 
-      <Divider color='secondary' />
+      <Divider style={{ background: 'grey' }} />
     </Fragment>
   ));
 
@@ -70,7 +70,7 @@ export default function Projects() {
     <>
       <Typography variant='h5' align='center'>
         &lt; GitHub Repos &gt;
-        <Divider color='primary' />
+        <Divider style={{ background: 'green' }} />
       </Typography>
       <Box display='flex' alignItems='center' justifyContent='center'>
         <List>{listItems}</List>

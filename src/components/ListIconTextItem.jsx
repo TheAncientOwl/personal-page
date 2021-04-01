@@ -6,7 +6,7 @@ export default function ListIconTextItem({ icon, prop1, prop2 }) {
   return (
     <>
       <ListItem>
-        <ListItemIcon color='secondary'>{icon}</ListItemIcon>
+        <ListItemIcon style={{ color: 'grey' }}>{icon}</ListItemIcon>
         <ListItemText>
           <i>{prop1}</i> &gt;{' '}
           <Typography component='span' color='primary'>
