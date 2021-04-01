@@ -48,7 +48,7 @@ export default function Experience() {
                 ))}
               </ul>
             </Typography>
-            <Divider />
+            <Divider style={{ background: 'green' }} />
           </TimelineContent>
 
           <TimelineSeparator>
