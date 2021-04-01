@@ -68,7 +68,8 @@ export default function Projects() {
   return (
     <>
       <Typography variant='h5' align='center'>
-        GitHub Repos
+        &lt; GitHub Repos &gt;
+        <Divider style={{ background: 'green' }} />
       </Typography>
       <Box display='flex' alignItems='center' justifyContent='center'>
         <List>{listItems}</List>
