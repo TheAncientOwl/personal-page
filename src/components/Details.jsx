@@ -34,7 +34,11 @@ const DetailsConfig = [
   },
   {
     title: 'GitHub',
-    value: 'https://github.com/TheAncientOwl',
+    value: (
+      <Link color='primary' target='_blank' href='https://github.com/TheAncientOwl'>
+        https://github.com/TheAncientOwl
+      </Link>
+    ),
     icon: <GitHubIcon />,
   },
   {
@@ -51,7 +55,7 @@ const DetailsConfig = [
     title: 'Try on Spotify',
     value: (
       <Link
-        style={{ color: 'green' }}
+        color='primary'
         target='_blank'
         href='https://open.spotify.com/playlist/5YYqRKbgTKXAcP91Tv8r1Y?si=7NBnKV3wROCPmWCYeO2yIw'>
         my music (over 600 songs)
