@@ -20,7 +20,7 @@ export default function NavBarNameTitle() {
 
   return (
     <Typography
-      style={{ color: `${color}`, paddingTop: `${paddingTop}`, paddingBottom: `${paddingBottom}` }}
+      style={{ fontWeight: 'bold', color: `${color}`, paddingTop: `${paddingTop}`, paddingBottom: `${paddingBottom}` }}
       component='div'
       variant={scrollY === 0 ? 'h4' : 'h6'}>
       Delegeanu Alexandru
