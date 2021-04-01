@@ -1,5 +1,8 @@
 import React from 'react';
-import { Grid, Paper, Divider, Typography } from '@material-ui/core';
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import BeenhereIcon from '@material-ui/icons/Beenhere';
+import ListIconTextItem from './ListIconTextItem';
 
 const HobbiesConfig = [
   {
@@ -23,28 +26,23 @@ const HobbiesConfig = [
 
 export default function Hobbies() {
   return (
-    <Grid container style={{ flex: 1 }} spacing={2}>
-      <Grid item xs={12}>
-        <Grid container justify='center' spacing={2}>
-          {HobbiesConfig.map((hobby, index) => (
-            <Grid key={index} item>
-              <Paper>
-                <Typography variant='h5' style={{ color: 'green' }}>
-                  &lt; {hobby.title} &gt;
-                </Typography>
-                <Divider />
-                <Typography component='div' variant='body2'>
-                  <ul style={{ listStyleType: 'none' }}>
-                    {hobby.about.map((ab, index) => (
-                      <li key={index}>{ab}</li>
-                    ))}
-                  </ul>
-                </Typography>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
-    </Grid>
+    <>
+      {HobbiesConfig.map((hobby, index) => (
+        <Accordion key={index}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon style={{ color: 'gray' }} />}>
+            <ListIconTextItem icon={<BeenhereIcon />} prop1={hobby.title} />
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography component='div'>
+              <ul style={{ listStyleType: 'none' }}>
+                {hobby.about.map((ab, index) => (
+                  <li key={index}>{ab}</li>
+                ))}
+              </ul>
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
+    </>
   );
 }
