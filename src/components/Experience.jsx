@@ -52,7 +52,7 @@ export default function Experience() {
           </TimelineContent>
 
           <TimelineSeparator>
-            <TimelineDot variant='outlined' />
+            <TimelineDot color='primary' variant='outlined' />
             <TimelineConnector />
           </TimelineSeparator>
 
