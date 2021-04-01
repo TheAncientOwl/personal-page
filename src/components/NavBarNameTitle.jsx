@@ -14,8 +14,15 @@ export default function NavBarNameTitle() {
     setScrollY(window.scrollY);
   };
 
+  const color = scrollY === 0 ? 'green' : 'inherit';
+  const paddingTop = scrollY === 0 ? '45px' : '30px';
+  const paddingBottom = scrollY === 0 ? '55px' : '20px';
+
   return (
-    <Typography style={{ paddingTop: '45px' }} component='div' variant={scrollY === 0 ? 'h4' : 'h5'}>
+    <Typography
+      style={{ color: `${color}`, paddingTop: `${paddingTop}`, paddingBottom: `${paddingBottom}` }}
+      component='div'
+      variant={scrollY === 0 ? 'h4' : 'h6'}>
       Delegeanu Alexandru
     </Typography>
   );
