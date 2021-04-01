@@ -7,28 +7,44 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import { Typography, Divider } from '@material-ui/core';
 
+import Highlight from './Highlight';
+
 const ExperienceConfig = [
   {
     language: 'C++',
-    details: [' In high school I participated in algorithmic contests where I used the C++ language'],
+    details: [
+      <>
+        {' '}
+        In high school I participated in <Highlight>algorithmic contests</Highlight> where I used the{' '}
+        <Highlight>C++</Highlight> language
+      </>,
+    ],
   },
   {
     language: 'Java',
     details: [
-      'Besides programming, I like games.',
-      'During high school I combined them by developing Java plugins for Minecraft multiplayer servers.',
+      <>
+        During high school I combined gaming and programming by developing{' '}
+        <Highlight>Java plugins for Minecraft Multiplayer servers</Highlight>.
+      </>,
     ],
   },
   {
     language: 'C# & UnityEngine',
     details: [
-      'For a few months now I have combined again my two passions and started studying game development with C# & Unity Game Engine.',
+      <>
+        For a few months now I have combined again my two passions and started studying{' '}
+        <Highlight>game development with C# & Unity Game Engine</Highlight>.
+      </>,
     ],
   },
   {
     language: 'JavaScript & ReactJS',
     details: [
-      'The real adventure with JavaScript started in the second year of college when I enrolled in the "Tap that job" project and I was admitted to the JavaScript & ReactJS courses at Ubisoft.',
+      <>
+        <Highlight>The real adventure</Highlight> started in the second year of college when I enrolled in the &quot;Tap
+        that job&quot; project and I was admitted to the JavaScript & ReactJS courses at Ubisoft.
+      </>,
     ],
   },
 ];
