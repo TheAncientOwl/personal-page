@@ -49,8 +49,6 @@ const ExperienceConfig = [
   },
 ];
 
-import './border.css';
-
 export default function Experience() {
   return (
     <Timeline align='right'>

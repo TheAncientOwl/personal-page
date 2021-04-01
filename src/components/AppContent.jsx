@@ -6,11 +6,6 @@ import BottomBar from './BottomBar';
 
 const useStyles = makeStyles({
   root: {
-    borderStyle: 'solid',
-    borderWidth: '0.5px',
-    //borderColor: 'green',
-    borderColor: 'transparent',
-
     marginTop: '250px',
     textAlign: 'center',
     minHeight: '50vh',

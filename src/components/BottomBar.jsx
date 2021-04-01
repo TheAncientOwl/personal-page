@@ -8,11 +8,6 @@ import ThemeToggleButton from './ThemeToggleButton';
 
 const useStyles = makeStyles({
   root: {
-    borderStyle: 'solid',
-    borderWidth: '0.5px',
-    //borderColor: 'green',
-    borderColor: 'transparent',
-
     marginTop: '50px',
     marginBottom: '50px',
   },
