@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Button } from '@material-ui/core';
@@ -13,42 +13,47 @@ import Details from './Details';
 const ButtonsConfig = [
   {
     title: 'About',
-    makeContent: <About />,
+    component: <About />,
   },
   {
     title: 'Skills',
-    makeContent: <Skills />,
+    component: <Skills />,
   },
   {
     title: 'Experience',
-    makeContent: <Experience />,
+    component: <Experience />,
   },
   {
     title: 'Projects',
-    makeContent: <Projects />,
+    component: <Projects />,
   },
   {
     title: 'Hobbies',
-    makeContent: <Hobbies />,
+    component: <Hobbies />,
   },
   {
     title: 'Details',
-    makeContent: <Details />,
+    component: <Details />,
   },
 ];
 
 export default function NavBarButtons({ onClick }) {
+  const [currentButton, setCurrentButton] = useState(ButtonsConfig[0].title);
+  console.log(currentButton);
   return (
     <div style={{ paddingTop: '55px', paddingBottom: '10px' }}>
       {ButtonsConfig.map((button, index) => {
+        const col = currentButton === button.title ? 'green' : 'inherit';
         return (
           <Button
+            style={{ color: `${col}` }}
             onClick={() => {
               const anchor = document.querySelector('#back-to-top-anchor');
               if (anchor) {
                 anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
               }
-              onClick(button.makeContent);
+              setCurrentButton(button.title);
+              onClick(button.component);
             }}
             key={index}>
             {button.title}
