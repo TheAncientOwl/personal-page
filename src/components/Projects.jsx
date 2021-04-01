@@ -54,7 +54,7 @@ export default function Projects() {
             </>
           }
           secondary={
-            <Typography variant='body2' className={classes.inline} color='textPrimary'>
+            <Typography variant='body2' className={classes.inline}>
               {repo.owner.login}
               {' — ' + repo.description}
             </Typography>
