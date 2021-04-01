@@ -13,27 +13,27 @@ import Details from './Details';
 const ButtonsConfig = [
   {
     title: 'About',
-    makeContent: About,
+    makeContent: <About />,
   },
   {
     title: 'Skills',
-    makeContent: Skills,
+    makeContent: <Skills />,
   },
   {
     title: 'Experience',
-    makeContent: Experience,
+    makeContent: <Experience />,
   },
   {
     title: 'Projects',
-    makeContent: Projects,
+    makeContent: <Projects />,
   },
   {
     title: 'Hobbies',
-    makeContent: Hobbies,
+    makeContent: <Hobbies />,
   },
   {
     title: 'Details',
-    makeContent: Details,
+    makeContent: <Details />,
   },
 ];
 

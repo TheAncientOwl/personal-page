@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 export default function App() {
-  const [content, setContent] = useState(About());
+  const [content, setContent] = useState(<About />);
   const classes = useStyles();
 
   return (
