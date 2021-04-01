@@ -8,7 +8,7 @@ const HobbiesConfig = [
   {
     title: 'Programming',
     about: [
-      'I like to see my ideas come to life.',
+      'I like to see how my ideas come to life.',
       'This passion started in high school',
       'I like to use my logic to solve various algorithmic problems.',
       'I also like to use programming to automate some tasks.',
