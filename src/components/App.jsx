@@ -40,10 +40,10 @@ export default function App() {
             default: lightTheme ? 'white' : 'black',
           },
           primary: {
-            main: '#12B000',
+            main: '#0EA10B',
           },
           secondary: {
-            main: '##63B064',
+            main: '#A1A399',
           },
         },
       }),
