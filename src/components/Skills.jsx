@@ -12,7 +12,7 @@ const SkillsConfig = [
       'When I started learning programming in high school, the first language was C.',
       'Once I developed my algorithmic thinking, it was pretty easy for me to switch to C++.',
       'I like the fact that it is very efficient and that the programmer has a lot of control over what happens to the memory.',
-      'This is the language I used in programming contests.w',
+      'This is the language I used in programming contests.',
     ],
   },
   {
