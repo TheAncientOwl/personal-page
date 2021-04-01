@@ -1,5 +1,5 @@
-import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@material-ui/core';
+import React, { Fragment } from 'react';
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Divider } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import BeenhereIcon from '@material-ui/icons/Beenhere';
 import ListIconTextItem from './ListIconTextItem';
@@ -51,20 +51,23 @@ export default function Skills() {
   return (
     <>
       {SkillsConfig.map((skill, index) => (
-        <Accordion key={index}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon color='secondary' />}>
-            <ListIconTextItem icon={<BeenhereIcon />} prop1={skill.language} prop2={skill.level} />
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography component='div'>
-              <ul style={{ listStyleType: 'none' }}>
-                {skill.about.map((ab, index) => (
-                  <li key={index}>{ab}</li>
-                ))}
-              </ul>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+        <Fragment key={index}>
+          <Accordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon color='secondary' />}>
+              <ListIconTextItem icon={<BeenhereIcon />} prop1={skill.language} prop2={skill.level} />
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography component='div'>
+                <ul style={{ listStyleType: 'none' }}>
+                  {skill.about.map((ab, index) => (
+                    <li key={index}>{ab}</li>
+                  ))}
+                </ul>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Divider style={{ background: 'green' }} />
+        </Fragment>
       ))}
     </>
   );
