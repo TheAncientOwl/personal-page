@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Button } from '@material-ui/core';
+import { Button, Grid } from '@material-ui/core';
 
 import About from './About';
 import Hobbies from './Hobbies';
@@ -42,23 +42,27 @@ export default function NavBarButtons({ onClick }) {
 
   return (
     <div style={{ paddingBottom: '10px' }}>
-      {ButtonsConfig.map((button, index) => {
-        return (
-          <Button
-            color={currentButton === button.title ? 'primary' : 'secondary'}
-            onClick={() => {
-              const anchor = document.querySelector('#back-to-top-anchor');
-              if (anchor) {
-                anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }
-              setCurrentButton(button.title);
-              onClick(button.component);
-            }}
-            key={index}>
-            {button.title}
-          </Button>
-        );
-      })}
+      <Grid container justify='center' spacing={2}>
+        {ButtonsConfig.map((button, index) => {
+          return (
+            <Grid key={index} item>
+              <Button
+                color={currentButton === button.title ? 'primary' : 'secondary'}
+                onClick={() => {
+                  const anchor = document.querySelector('#back-to-top-anchor');
+                  if (anchor) {
+                    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                  setCurrentButton(button.title);
+                  onClick(button.component);
+                }}
+                key={index}>
+                {button.title}
+              </Button>
+            </Grid>
+          );
+        })}
+      </Grid>
     </div>
   );
 }
