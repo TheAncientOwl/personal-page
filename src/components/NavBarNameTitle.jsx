@@ -14,13 +14,14 @@ export default function NavBarNameTitle() {
     setScrollY(window.scrollY);
   };
 
-  const color = scrollY === 0 ? 'green' : 'inherit';
+  const color = scrollY === 0 ? 'primary' : 'inherit';
   const paddingTop = scrollY === 0 ? '45px' : '30px';
   const paddingBottom = scrollY === 0 ? '55px' : '20px';
 
   return (
     <Typography
-      style={{ fontWeight: 'bold', color: `${color}`, paddingTop: `${paddingTop}`, paddingBottom: `${paddingBottom}` }}
+      color={color}
+      style={{ fontWeight: 'bold', paddingTop: `${paddingTop}`, paddingBottom: `${paddingBottom}` }}
       component='div'
       variant={scrollY === 0 ? 'h4' : 'h6'}>
       Delegeanu Alexandru
