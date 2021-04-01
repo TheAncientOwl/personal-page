@@ -10,6 +10,9 @@ import AssistantIcon from '@material-ui/icons/Assistant';
 import BeenhereIcon from '@material-ui/icons/Beenhere';
 import AlbumIcon from '@material-ui/icons/Album';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+
+import ResumeOnePage from '../resume.pdf';
 
 const DetailsConfig = [
   {
@@ -74,6 +77,15 @@ const DetailsConfig = [
       </Link>
     ),
     icon: <AlbumIcon />,
+  },
+  {
+    title: 'Resume',
+    value: (
+      <Link color='primary' target='_blank' href={ResumeOnePage}>
+        ~ one page ~
+      </Link>
+    ),
+    icon: <AccountBoxIcon />,
   },
 ];
 
