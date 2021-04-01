@@ -29,7 +29,7 @@ export default function Hobbies() {
     <>
       {HobbiesConfig.map((hobby, index) => (
         <Accordion key={index}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon style={{ color: 'gray' }} />}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon color='secondary' />}>
             <ListIconTextItem icon={<BeenhereIcon />} prop1={hobby.title} />
           </AccordionSummary>
           <AccordionDetails>
