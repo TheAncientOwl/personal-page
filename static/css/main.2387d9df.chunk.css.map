@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/border.css"],"names":[],"mappings":"AAAA,QAGE,uBACF","file":"main.2387d9df.chunk.css","sourcesContent":[".border {\r\n  border-style: solid;\r\n  border-width: 0.5px;\r\n  border-color: green;\r\n}\r\n"]}
