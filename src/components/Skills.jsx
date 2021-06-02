@@ -92,7 +92,9 @@ export default function Skills() {
               <Typography component='div'>
                 <ul style={{ listStyleType: 'none' }}>
                   {skill.about.map((ab, index) => (
-                    <li key={index}>{ab}</li>
+                    <li style={{ marginLeft: '-25px' }} key={index}>
+                      {ab}
+                    </li>
                   ))}
                 </ul>
               </Typography>
