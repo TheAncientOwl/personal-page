@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   root: {
     marginTop: '50px',
     textAlign: 'center',
-    minHeight: '50vh',
+    minHeight: '80vh',
   },
 });
 

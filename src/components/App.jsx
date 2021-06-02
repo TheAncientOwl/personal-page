@@ -54,15 +54,13 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <main>
+        <>
           <NavBar onClick={setContent} />
-
           <div id='back-to-top-anchor' />
-
           <Container fixed maxWidth='md'>
             <AppContent onThemeSwitch={() => setLightTheme(!lightTheme)}>{content}</AppContent>
           </Container>
-        </main>
+        </>
       </ThemeProvider>
     </>
   );

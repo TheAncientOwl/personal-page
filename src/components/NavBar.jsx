@@ -7,6 +7,9 @@ import NavBarNameTitle from './NavBarNameTitle';
 const useStyles = makeStyles({
   navbar: {
     position: 'sticky',
+    top: 0,
+    background: 'black',
+    zIndex: '999',
   },
 });
 
