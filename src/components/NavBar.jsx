@@ -1,17 +1,25 @@
-import { AppBar, Toolbar } from '@material-ui/core';
+import { Toolbar, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React from 'react';
 import NavBarButtons from './NavBarButtons';
 import NavBarNameTitle from './NavBarNameTitle';
 
+const useStyles = makeStyles({
+  navbar: {
+    position: 'sticky',
+  },
+});
+
 export default function NavBar({ onClick }) {
+  const classes = useStyles();
+
   return (
-    <AppBar elevation={0} color='inherit'>
+    <div className={classes.navbar}>
       <Toolbar style={{ flexDirection: 'column' }}>
         <NavBarNameTitle />
         <NavBarButtons onClick={onClick} />
       </Toolbar>
-    </AppBar>
+    </div>
   );
 }
 

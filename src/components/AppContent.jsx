@@ -6,7 +6,7 @@ import BottomBar from './BottomBar';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: '250px',
+    marginTop: '50px',
     textAlign: 'center',
     minHeight: '50vh',
   },
