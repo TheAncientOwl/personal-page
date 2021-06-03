@@ -26,7 +26,7 @@ export default function NavBarNameTitle() {
         textAlign: 'center',
         paddingTop: `${paddingTop}`,
         paddingBottom: `${paddingBottom}`,
-        transition: 'all 0.3s ease',
+        transition: 'all 0.2s linear',
       }}
       component='div'
       variant={scrollY === 0 ? 'h4' : 'h6'}>
