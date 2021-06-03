@@ -30,7 +30,7 @@ export default function NavBarNameTitle() {
       }}
       component='div'
       variant={scrollY === 0 ? 'h4' : 'h6'}>
-      Delegeanu Alexandru
+      Alexandru Delegeanu
     </Typography>
   );
 }
